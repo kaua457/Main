@@ -1,0 +1,247 @@
+@charset "UTF-8";
+@font-face {
+    font-family: Android;
+    src: url(fontes/idroid.otf);
+}
+/*Configuração geral*/
+body{
+    background-image: linear-gradient(#0B141A); /* 45deg significa 45 graus, e linear-gradient, é para fazer um degradê */
+    /* to bottom, #293b4d, #141d28 */
+    background-attachment: fixed; /* Faz o background ficar fixo na tela, sem rolar junto com a página */
+    color: white;
+    font: normal 1em sans-serif ; /* shorthand font: sempre siga essa ordem para que tudo occora bem:
+    font-style -> font-weight -> font-size -> font-family */
+    margin: 0px /*Espaço do elemento, nesse caso, está sendo usado o shorthand, que fica da seguinte maneira a ordem: Cima, direita, baixo, esquerda;*/
+    }
+h1{
+    /* Define a sombra que ficará sob um determinado item, nesse caso, o h1 e a ordem nesse caso fica: horizontal | vertical | blur | cor */
+    align-items: center; /*Alinha um elemento no eixo secundário*/
+    margin-bottom: 20px; /*Espaço do elemento*/
+    font-family: Android;
+    font-weight: normal;
+}
+h2{
+    align-items: center;
+    font-family: Android;;
+    color: rgb(0, 3, 14);
+}
+h4{
+    background-color: #0B141A;
+    color: whitesmoke;
+    display: flexbox;
+    padding: 5px;
+    margin: 10px -5px 15px -15px;
+    text-align: center; /*Alinha um texto no eixo secundário*/
+    font: medium 1em sans-serif
+}
+p{
+    align-items: center; /*Alinha um elemento no eixo secundário*/
+    margin: 10px; /*Espaço do elemento*/
+    text-indent: 10px; /*Parecido com o gap, mas nesse caso, serve só para o começo do texto*/
+}
+img{
+    margin: 2px;
+    align-items: center;
+}
+/* Estiliza a parte do texto selecionada pelo usuário */
+::selection{
+    background-color: rgb(45, 58, 237); 
+}
+/* Enquanto o link não for visitado */
+a:link{
+   color: rgb(45, 97, 237);
+   text-decoration: none;
+}
+/* Quando o Link já foi visitado */
+a:visited{
+    color: rgb(51, 45, 237);
+    text-decoration: none;
+}
+/* Quando você passar o mouse sobre o link */
+a:hover{
+    transition: transform 0,2s;
+    color: rgb(236, 248, 4);
+    text-decoration: underline; /* Isso define que o texto ficará sublinhado */
+    }
+iframe{
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.291);
+    width: 100%;
+}
+/* Ordem recomendada para pseudo-classes de links:
+a:link -> a:visited -> a:hover -> a:active
+
+Isso evita que algumas propriedades sobrescrevam outras incorretamente.*/
+
+/*--IMPORTANTE--
+Sempre use a tag alt em imagens, serve para descrever as imagens que você usou para deficientes visuais, é muito importante para um website*/
+
+
+/*Barra horizontal*/
+/* teste */
+.barra2{
+    display: flex;
+    list-style-type: none;
+    margin: 30px 0px 0px 0px;
+}
+.barra2 > li > a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+.barra2 > li{
+    padding: 10px 10px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-radius: 10px;
+    transition: background-color 0.2s, color 0.2s, transform 0.2s
+}
+.barra2 > li:hover{
+    background-color: #3d546b;
+    transform: none;
+}
+/*Caixas/box*/
+aside{
+    background-image: linear-gradient(to bottom, #293b4d, #141d28);
+    /* 45deg, #162631, #14262f */
+    padding: 5px 5px 0px 0px;
+    margin: 0;
+}
+aside > h1, aside > h2, aside > p{
+    text-align: center;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.787);
+    color: #f5f5f5;
+}
+aside > ul{
+    margin: 0px;
+    padding: 0px 10px 0px 30px;
+}
+footer{
+    background-color: #ededede8;
+    padding: 5px;
+    margin: 15px; /*Espaço do elemento*/
+    border-radius: 6px;
+}
+footer > p{
+    margin-top: 1px; /*Espaço do elemento*/
+}
+div{
+    margin: 0; /*Espaço do elemento*/
+}
+/*Página 1*/
+.listas{
+    display: flex;
+    gap: 50px; /*Espaço entre elementos*/
+    flex-wrap: wrap;
+}
+.perfil{
+    display: flex;
+    align-items: center; /*Alinha um elemento no eixo secundário*/
+    gap: 20px; /*Espaço entre elementos*/
+}
+iframe.spotify{
+    width: auto;
+}
+/*Página 3*/
+body.zelda{
+    color: black;
+    font-size: small;
+    margin: 0; /*Espaço do elemento*/
+}
+main{
+    width: 800px;
+    margin: auto;
+    background-color: #dadada;
+    color: rgb(15, 15, 15);
+    padding: 10px 10px 10px 10px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.463);
+}
+main.informacao{
+    width: auto;
+    background-image: none;
+    background-color: #ededede8;
+    padding: 5px;
+    margin: 5px 15px 15px 15px; /*Espaço do elemento, nesse caso, está sendo usado o shorthand, que fica da seguinte maneira a ordem: Cima, direita, baixo, esquerda;*/
+    border-radius: 6px;
+}
+img.cover{
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.144);
+}
+.caixa{
+    float: right; /*Faz um elemento "flutuar" na página, nesse caso, à direita*/
+    width: 260px;
+    margin-left: 20px; /*Espaço do elemento*/
+    margin-bottom: 5px; /*Espaço do elemento*/
+    border: 1px solid black;
+    padding: 10px;
+    font-size: small;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 1px 1px 2px 1.4px rgba(0, 0, 0, 0.291);
+}
+.detalhes{
+    display: grid;  /*cria um sistema de linhas e colunas*/
+    grid-template-columns: 120px 1fr; /*layout bidimensional (linhas e colunas)*/
+    margin-bottom: 10px; /*Espaço do elemento*/
+}
+.detalhes h3{
+    margin: 0; /*Espaço do elemento*/
+}
+.detalhes ul{
+    margin: 0; /*Espaço do elemento*/
+    padding-left: 20px;
+    list-style: none;
+}
+.texto{
+    margin-left: 10px; /*Espaço do elemento*/
+    flex: 1;
+    min-width: 0;
+}
+/*Página 4*/
+.centro{
+flex-direction: column;
+align-items: center;
+display: flex;
+flex: 1;
+}
+.thumbs{
+display: flex;
+justify-content: center;
+gap: 20px;
+}   
+
+@media (max-width: 820px){
+    main{
+        width: auto;
+        border-radius: 3px;
+    }
+    .perfil{
+        flex-direction: column;
+        display: block;
+        align-items: center; /*Alinha um elemento no eixo secundário*/
+        gap: 20px; /*Espaço entre elementos*/
+    }
+    .listas{
+        gap: 0px;
+    }
+    .caixa{
+        float: none;
+        width: auto;
+        margin-right: 20px;
+        margin-left: 20px;
+        padding-left: 30px;
+    }
+    .thumb > a{
+        display: flex;
+    }
+    iframe{
+        box-shadow: none; 
+    }
+    .barra2{
+        font-size: 0.6em;
+    }
+}

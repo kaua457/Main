@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/triforce.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="modal" id="login">
+        <div class="janela">
+            <div class="topo">
+                <h2>Login</h2>
+                <button class="sair" onclick="fechar_janela()">X</button>
+            </div>
+            <input class="dados" id="nome" type="text" placeholder="Digite seu nome">
+            <input class="dados" type="password" name="senha" id="senha" placeholder="Digite sua senha">
+            <input class="botao" id="login" type="submit" onclick="confirmar()" value="Login">
+            <p>Não tem uma conta? <a href="#">Cadastre-se</a></p>
+        </div>
+    </div>
+    <div class="modal" id="logout">
+        <div class="janela">
+            <div class="topo">
+                <h2>Logout</h2>
+                <button class="sair" onclick="fechar_janela()">X</button>
+            </div>
+            <h3>Deseja sair?</h3>
+            <div class="botoes">
+                <input class="botao" type="button" onclick="sim()" value="Sim">
+                <input class="botao" type="button" onclick="nao()" value="Não">
+            </div>
+        </div>
+    </div>
+    <header id="barra_vertical">
+        <div>
+            <h1>Desenvolvendo interfaces</h1>
+        </div>
+        <div>
+            <ul class="barra">
+                <li id="logado"><button onclick="abrir_janela()"><img src="imagens/user.png" width="30px" alt=""> Login</button></li>
+                <li><button id="opçao" onclick="abrir_menu()"><img src="imagens/menu.png" width="30px" alt="" style="margin: 0px;"></button></li>
+            </ul>
+        </div>
+        <div id="menu">
+            <ul class="barra">
+                <li><button onclick="location.href='#contatos'">Contatos</button></li>
+                <li><button onclick="modo()">Modo escuro</button></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h1><em>Quem sou eu?</em></h1>
+        <nav>
+            <img class="perfil" src="https://i.pinimg.com/1200x/e9/53/3f/e9533ff2f9fd2813379b65abdb3e5643.jpg" width="100px" height="100px"  alt="Imagem do personagem Link de The Legend of Zelda">
+            <p id="msg">Olá, me chamo Kauã, criei esse site para mostrar alguns esboços e também tentar reunir o que já aprendi e juntar nessa página, claro, não tem tudo, mas acredito que a grande maioria esteja aqui, aqui você também pode me conhecer um pouco, e vou tentar atualizá-la semanalmente.</p>
+        </nav>
+        <div class="informaçao">
+            <h1>Informações rápidas</h1>
+            <div class="lista">
+                <div class="categoria">
+                   <div class="card">
+                       <h2>Hobbys 🎯</h2>
+                   </div>
+                    <ul>
+                        <li>Academia</li>
+                        <li>Programar</li>
+                        <li>Jogar</li>
+                        <li>Ouvir música</li>
+                    </ul>
+                </div>
+                <div class="categoria">
+                    <div class="card">
+                        <h2>Músicas favoritas 🎧</h2>
+                    </div>
+                    <ul>
+                        <li><a href="https://open.spotify.com/intl-pt/track/2Q5UomI9qEaedwkqmwKk5v?si=83e5a4177b8e4cf9" target="_blank" type="external">Melodias</a></li>
+                        <li><a href="https://open.spotify.com/intl-pt/track/1b4qBYXrG1psX9B3gJQocb?si=f41db1fde43248a7" target="_blank" type="external">Anjo Caído</a></li>
+                        <li><a href="https://open.spotify.com/intl-pt/track/6ahKSqtXbxGKF5UM79m4Dc?si=c7c7f552e89f439b" target="_blank" type="external">Flores de Outrora</a></li>
+                        <li><a href="https://open.spotify.com/intl-pt/track/4SpBtogHJYUqAYIs2DSH0G?si=915d6da9f32f426f" target="_blank" type="external">Se eu te pedir</a></li>
+                    </ul>
+                </div>
+                <div class="categoria">
+                    <div class="card" id="contatos">
+                        <h2>Redes sociais 💬</h2>
+                    </div>
+                    <ul>
+                        <li><a href="https://www.instagram.com/kaua_amorim459/" target="_blank" type="external"><img src="imagens/instagram.ico" alt="Ícone do Instagram">Instagram</a></li>
+                        <li><a href="https://x.com/Rian4593" target="_blank" type="external"><img src="imagens/Twitter1.ico" alt="Ícone do Twitter, ou X se preferir">Twitter</a></li>
+                        <li><a href="https://discord.com/users/706547436419678248" target="_blank" type="external"><img src="imagens/discord.ico" alt="Ícone do Discord">Discord</a></li>
+                        <li><a href="https://github.com/kaua457"><img src="imagens/github.ico" alt="Ícone do Github">Github</a></li>
+                    </ul>
+                </div>
+                <div class="categoria">
+                    <div class="card">
+                        <h2>Jogos favoritos 🎮</h2>
+                    </div>
+                    <ul>
+                        <li>Zelda Breath of the Wild</li>
+                        <li>Super mario Wonder</li>
+                        <li>Batman Arkham City</li>
+                        <li>Hollow Knight Silksong</li>
+                    </ul>
+                </div>
+                <div class="categoria">
+                    <div class="card">
+                        <h2>Artistas Favoritos 🎵</h2>
+                    </div>
+                    <ul>
+                        <li><a href="https://open.spotify.com/intl-pt/artist/2cK4L8fSVVqvW2gyePXeJw?si=XgA5xg7NTSC7AdsztIixVQ" target="_blank" type="external">Anny</a></li>
+                        <li><a href="https://open.spotify.com/intl-pt/artist/2Wc7NhRgqg7U7kxgRGBP2t?si=0e7d796c7ee24075" target="_blank" type="external">Raphyx</a></li>
+                        <li><a href="https://open.spotify.com/intl-pt/artist/4zEqUhpfZ5M3b2jZsH1A2O?si=FVCRrAKbST-zx4gwC-MmMQ" target="_blank" type="external">Henrique Mendonça</a></li>
+                        <li><a href="https://open.spotify.com/intl-pt/artist/0ZCFSmJKfaYQi0gRSShdou?si=MyGScsONSPSqmjMsJVag7A" target="_blank" type="external">TabaB</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h2><em>Minha história com o mundo dos jogos</em></h2>
+        <section>
+            <p>Eu desde cedo gosto de jogos, os consoles que eu já tive foram o famoso <mark><a href="https://pt.wikipedia.org/wiki/PlayStation_2" target="_blank" type="external">PS2</a></mark>, mas quando eu tive ele eu não tinha muita noção de jogos ainda, tive poucos jogos, não tinha nem memory card, e também ficou pouco tempo comigo, mas depois de um tempo consegui um <mark><a href="https://pt.wikipedia.org/wiki/Xbox_360" target="_blank" type="external">Xbox 360</a></mark>, que foi aí que eu comecei a apreciar mais os jogos, e um dos meus jogos favoritos dele, foi o <mark><a href="https://pt.wikipedia.org/wiki/Batman:_Arkham_City">Batman Arkham City</a></mark>, foi uma, experiência, queria poder rejogar ele um dia, mas infelizmente o Xbox deu algum defeito, e ficaria muito caro, então depois de 1 ou 2 anos, consegui um <mark><a href="https://pt.wikipedia.org/wiki/Nintendo_Switch" target="_blank" type="external">Nintendo Switch</a></mark>, que tá comigo até hoje, é um console incrível, ele não é tão potente quanto um <mark><a href="https://pt.wikipedia.org/wiki/PlayStation_4" target="_blank" type="external">PS4</a></mark> ou um <mark><a href="https://pt.wikipedia.org/wiki/Xbox_One" target="_blank" type="external">Xbox One</a></mark>, mas a Nintendo na maioria das vezes consegue fazer um console incrível, e se tem uma coisa que ela sabe fazer, é jogo, e foi nesse console que conheci a franquia The Legend of Zelda, quando joguei <mark><a href="https://pt.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild" target="_blank" type="external">The Legend of Zelda Breath of the Wild</a></mark> pela primeira vez, meus olhos brilharam, não pensei que poderia ter um jogo tão vivo quanto aquele, em que você podia explorar cada canto do mapa e poderia ter algo, claro, existia jogos de mundo aberto em que você podia explorar o mapa e encontrar colecionáveis, itens, mas esse jogo, foi uma revolução pra mim, cada experiência foi mágica, mas com o Switch joguei franquias como Mario, claro, já conhecia, já havia jogado alguns jogos do Mario, porém, Mario tem muitos jogos pra jogar com amigos e família, joguei bastante <mark><a href="https://pt.wikipedia.org/wiki/Mario_Kart_8" target="_blank" type="external">Mario Kart 8</a></mark>, <mark><a href="https://pt.wikipedia.org/wiki/Mario_Party_Superstars" target="_blank" type="external">Mario party Superstars</a></mark>, e também joguei <mark><a href="https://pt.wikipedia.org/wiki/Super_Mario_Bros._Wonder" target="_blank" type="external">Super Mario Bros. Wonder</a></mark> e <mark><a href="https://pt.wikipedia.org/wiki/Super_Mario_Odyssey" target="_blank" type="external">Super Mario Odyssey</a></mark>, que pra ser sincero, eu não dava muita coisa, mas fui surpreendido, os 2 jogos foram incríveis, mas Super Mario Bros. Wonder, me fez gostar mais de jogos de plataforma 2D, ele tem um lugar especial pra mim, e nesse console também conheci <mark><a href="https://pt.wikipedia.org/wiki/Hollow_Knight" target="_blank" type="external">Hollow Knight</a></mark>, que eu via o pessoal falando muito na internet, principalmente próximo do lançamento de sua continuação, <mark><a href="https://pt.wikipedia.org/wiki/Hollow_Knight:_Silksong" target="_blank" type="external">Hollow Knight Silksong</a></mark>, então resolvi dar uma chance, no começo eu tava achando meio enjoado pra ser sincero, mas depois que me acostumei com o ritmo do jogo, fiquei cada vez com mais vontade de jogar, eu não havia jogado metroidvânia ainda, sempre achei meio complicado e cansativo, mas esse jogo me fez mudar a opinião sobre esse gênero de jogo, e depois quando lançou Silksong, tava muito Hypado pra jogar, e me surpreendeu de novo, um upgrade do primeiro jogo definitivamente, por isso coloquei também como em um dos meus jogos favoritos, mas queria conhecer mais jogos, coloquei na minha cabeça que queria jogar mais jogos, queria conhecer mais sobre esse mundo, então queria montar um PC pra isso, pra jogar jogos mais antigos, conhecer mais franquias, e jogar mais multiplayer com amigos, então logo abaixo, resolvi mostrar o PC "dos sonhos" que eu gostaria de montar.</p>
+        </section>
+        <table>
+            <caption>Detalhes do PC que quero montar</caption>
+            <thead>
+                <tr>
+                    <th scope="col">Componente</th>
+                    <th scope="col">Modelo</th>
+                    <th scope="col">Tecnologia</th>
+                    <th scope="col">Preço estimado</th>
+                </tr>
+            </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Fonte</th>
+                        <td>650 W 80 Plus Bronze</td>
+                        <td>ATX</td>
+                        <td>R$ 350</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Placa-Mãe</th>
+                        <td>B550M-A PRO</td>
+                        <td>AM4 / DDR4</td>
+                        <td>R$ 550</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Memória Ram</th>
+                        <td>16 GB DDR4</td>
+                        <td>DDR4</td>
+                        <td>R$ 600</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">SSD</th>
+                        <td>Kingston NV2 512 GB</td>
+                        <td>NVMe PCIe 4.0</td>
+                        <td>R$ 500</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Processador</th>
+                        <td>Ryzen 5 5700X</td>
+                        <td>AM4</td>
+                        <td>R$ 1000</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Placa de Vídeo</th>
+                        <td>RTX 5060</td>
+                        <td>PCIe 5.0 / GDDR7</td>
+                        <td>R$ 2.100</td>
+                    </tr>
+                    <tr>
+                        <th>Water Cooler</th>
+                        <td colspan="2">Pichau Aqua 240X</td>
+                        <td>R$ 250</td>
+                    </tr>
+                    <tr>
+                        <th>Fans</th>
+                        <td colspan="2">Power Train PRISM 8 Pro 120mm</td>
+                        <td>R$ 50</td>
+                    </tr>
+                    <tr>
+                        <th>Gabinete</th>
+                        <td colspan="2">Aquário Aigo Apollo A275</td>
+                        <td>R$ 100</td>
+                    </tr>
+                </tbody>
+            <tfoot>
+                <tr>
+                    <th scope="row" colspan="3">Total</th>
+                    <td>R$ 5.300</td>
+                </tr>
+            </tfoot>
+        </table>       
+    </main>
+    <script src="arquivo.js"></script>
+</body>
+</html>

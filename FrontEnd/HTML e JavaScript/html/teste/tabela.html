@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="imagens/dragon ball.ico" type="image/x-icon">
+    <style>
+        .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 20px;}
+        .container > div {
+        flex: 1;
+        min-width: 600px;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div>
+        <form action="">
+            <p><label for="nome">Nome completo:</label><input type="text" id="nome_completo" name="nome_completo"></p>
+            <p><label for="email">Email:</label><input type="email" id="email" name="email"></p>
+            <p><label for="senha">Senha:</label><input type="password" id="senha" name="senha"></p>
+            <input type="submit" value="Enviar">
+        </form>
+        <br>
+
+    <div>
+        <h2>Jogos que eu Gosto</h2>
+    
+        <table border="1">
+            <tr>
+                <th>Capa do Jogo</th>
+                <th>Nome do Jogo</th>
+                <th>Gênero</th>
+                <th>Disponibilidade</th>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/The_Legend_of_Zelda:_Breath_of_the_Wild" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/pt/0/0f/Legend_of_Zelda_Breath_of_the_Wild_capa.png" width="100" alt="Capa do jogo The Legend of Zelda Breath of the Wild" title="Página do jogo na Wiki"></a></td>
+                <td width="125">
+                    <p>The Legend of Zelda Breath of The Wild</p>
+                </td>
+                <td>Aventura</td>
+                <td>Nintendo Switch 1 e 2</td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Batman:_Arkham_City" target="_blank" rel="external"><img src="https://upload.wikimedia.org/wikipedia/pt/f/f0/Batman_arkham_city_logo.jpg" width="100" title="Página do jogo na Wiki"></a></td>
+                <td>Batman Arkham City</td>
+                <td>Ação</td>
+                <td width="125">
+                    <p>PS3, Xbox 360, PC, Wii U, Xbox One, PS4</p>
+            </td>
+            </tr>
+            <tr>
+                <td><a href="https://pt.wikipedia.org/wiki/Hollow_Knight:_Silksong" target="_blank" rel="external"><img src="https://upload.wikimedia.org/wikipedia/pt/thumb/8/86/Hollow_Knight_Silksong_cover.jpeg/250px-Hollow_Knight_Silksong_cover.jpeg" width="100" title="Página do jogo na Wiki"></a></td>
+                <td>Hollow Knight Silksong</td>
+                <td>Metroidvania</td>
+                <td>PS4, PS5, Xbox One, Xbox Series, Nintendo Switch 1 e 2, PC</td>
+            </tr>
+        </table>
+    </div>
+    <a href="main2.html" style="position: fixed; bottom: 10px; left: 10px;"><img src="imagens/voltar.png" alt=""></a>
+    <a href="pagina3.html" style="position: fixed; bottom: 10px; right: 10px;"><img src="imagens/avancar.png" alt=""></a>
+</body>
+</html>

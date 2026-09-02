@@ -1,0 +1,435 @@
+html{
+    scroll-behavior: smooth;
+}
+html,body{
+    margin: 0px;
+    background-color:#020214 ;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background: var(--wallpaper);
+}
+:root{
+    --wallpaper: url(imagens/vice-city.jpg) center/ cover no-repeat fixed;
+    --background_header: linear-gradient(to right, #0e2b6b,#631e97);
+    --background_main:  rgba(6, 4, 40, 0.87);
+    --background_section: #151653d3;
+    --background_categoria: #0b092db9;
+    --background_th: linear-gradient(to top, #1a1a6a, #2c207c);
+    --background_td1:#101b61;
+    --background_td2:#250959;
+    --background_tag1: linear-gradient(to right, #1e2e62a7, transparent 80%);
+    --background_tag2: linear-gradient(to right, #181237f5, #171541e2);
+    --background_input: #0504225a;
+    --background_button: #dcdcff;
+    --background_hoverbutton: #badbe7;
+    --background_hoverbutton2: #872db4;
+    --janela: #100c48;
+    --janela_tag: #07072894;
+    --linha: #ffff0090;
+    --borda: 1.5px solid rgb(235, 207, 22);
+    --shadow: 0px 0px 2px 1px rgb(255, 255, 0);
+}
+h1{
+    margin-top: 0px;
+    font-weight: normal;
+}
+p{
+    text-indent: 10px;
+}
+mark{
+    background-color: #364fbd;
+    padding: 2px;
+    border-radius: 3px;
+}
+li{
+    align-items: center;
+    display: flex;
+    margin-bottom: 0px;
+    gap: 8px;
+}
+a img{
+    width: 20px;
+    margin-right: 5px;
+}
+a{
+    justify-content: center;
+    align-items: center;
+    display: inline;
+}
+ul{
+    padding: 0px;
+    list-style-position: inside;
+    margin-bottom: 5px;
+}
+table{
+    margin: 20px auto 20px auto;
+    border-collapse: collapse;
+    box-shadow: var(--shadow)
+}
+table *{
+    font-size: 1.1em;
+}
+caption{
+    background-color: #070728;
+    padding: 10px;
+    border-radius: 5px 5px 0px 0px;
+    border: var(--borda);
+    box-shadow: var(--shadow)
+}
+th, td{
+    border: var(--borda);
+    padding: 10px;
+}
+thead{
+    position: sticky;
+    top: 49.9px;
+}
+thead th, tbody th{
+    background-image: var(--background_th);
+}
+tbody > tr:nth-child(odd){ /*odd significa ímpar, ou seja, todo tr que seja ímpar dentro do tbody, terá esse background color, também pode colocar even, que é par, ou também outro jeito, que não é muito recomendado (isso sou eu que estou dizendo), usar 2n por exemplo, que significa que de duas em duas linhas o background ficará dessa cor, o número depende, não precisa ser 2n, também tem uma variação que seria 2n-1, aí o primeiro tr terá esse background color, e começa a partir dele a contagem*/
+    background-color: var(--background_td1);
+}
+tbody > tr:nth-child(even){
+    background-color:var(--background_td2);
+}
+tfoot th, tfoot td{
+    text-align: left;
+    background-color: #070728;
+}
+div.modal{
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,.6);
+    }
+div.janela{
+    width:550px;
+    height: 320px;
+    position: fixed;
+    margin: auto;
+    background-color: var(--janela);
+    border-radius: 10px;
+    border: var(--borda);
+}
+div.janela div.topo{
+    background-color: var(--janela_tag);
+    border-radius:12px 12px 0px 0px;
+    border-bottom: var(--borda);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+div.janela div.topo > h2{
+    color: rgb(236, 236, 18);
+    font-weight: 400;
+    padding-left: 15px;
+}
+div.janela div.topo > button.sair{
+    background-color: rgba(0, 0, 0, 0);
+    color: yellow;
+    font-size: larger;
+    align-items: flex-start;
+    border-radius: 100%;
+    border: none;
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+}
+div.janela div.topo > button.sair:hover{
+    background-color: #1d1d89f7;
+    transition: 0.4s;
+}
+div.janela h3{
+    font-weight: 300;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.5em;
+}
+div.janela input.dados{
+    background-color: var(--background_input);
+    display: flex;
+    margin: auto;
+    border: var(--borda);
+    border-radius: 10px;
+    margin-top: 25px;
+    width: 300px;
+    height: 30px;
+    padding: 4px;
+    color: white;
+}
+div.janela p{
+    justify-content: center;
+    display: flex;
+}
+div.janela a{
+    color: rgb(0, 115, 255);
+}
+.botao{
+    display: flex;
+    width: 300px;
+    margin: 25px;
+    font-size: 1.2em;
+    justify-content: center;
+    padding: 5px;
+    height: auto;
+    background-color: var(--background_button);
+    color: rgb(0, 0, 0);
+    border: var(--borda);
+    border-radius: 10px;
+}
+div.janela > div.botoes{
+    display: flex;
+    margin-top: 100px;
+}
+div.botoes > button{
+    width: 30px;
+}
+div.janela #login{
+    margin: 25px auto;
+}
+input.botao:hover{
+    background-color: var(--background_hoverbutton);
+}
+::placeholder{
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.3em;
+}
+header{
+    position: relative;
+    background:var(--background_header);
+    margin: 0px;
+    padding: 1px 20px 0px 20px;
+    border-radius: 0px 0px 3px 3px;
+    box-shadow: 0px 0px 1px 1px rgb(255, 255, 0);
+    justify-content: space-between;
+    align-items: flex-end;
+    display: flex;
+    position: sticky;
+    top: 0;
+}
+header *{
+    color: white;
+}
+header h1{
+    margin-top: 20px;
+    font-size: 1em;
+}
+.barra{
+    display: flex;
+    list-style-type: none;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    margin-left: 30px;
+    margin-top: 0px;
+}
+.barra li{
+    border-radius: 5px;
+}
+.barra li button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#menu img{
+    margin: 0px;
+}
+.barra img{
+    display: block;
+    margin-right: 8px;
+    border-radius: 100%;
+}
+.barra > li button{
+    padding: 10px 8px 10px 8px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 1em;
+}
+.barra > li:hover{
+    background-color: var(--background_hoverbutton2);
+    transition: 0.4s;
+}
+div#menu{
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    display: none;
+    transition: transform 0.3s ease;
+}
+div#menu .barra{
+    display: block;
+    width: 150px;
+    font-size: 1.1em;
+    background-image: var(--background_header);
+    background-size: 100vw 100%;
+    background-repeat: no-repeat;
+    background-position: right top;
+    border-radius: 0px 0px 0px 5px;
+    box-shadow: 0px 1px 2px 0.4px rgba(255, 255, 0, 0.513);
+}
+div#menu .barra > li{
+    padding-left: 7px;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+}
+#menu.fechada{
+    transform: translateX(-100%);
+}
+.perfil{
+    border-radius: 50%;
+    box-shadow: var(--shadow);
+    margin-left: 20px;
+}
+main{
+    margin: auto;
+    padding: 10px;
+    width: 900px;
+    height: auto;
+    border-radius: 3px;
+    background-color: var(--background_main);
+    border-right: var(--borda);
+    border-bottom: var(--borda);
+    border-left: var(--borda);
+}
+main *{
+    color: white;
+    text-shadow: 2px 2px 1px #02021488;
+}
+main > h1, main > h2{
+    padding: 5px;
+    background-image:var(--background_tag1) ;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.678);
+    border-radius: 4px;
+    font-size: 1.8em;
+    margin-left: 10px;
+}
+main em{
+    color: yellow;
+    font-weight: bold;
+}
+main a{
+    text-decoration: none;
+}
+main a::after{
+    content: "🔗";
+    font-size: 0.7em;
+    margin-left: 2px;
+    text-shadow: 1px 1px 1px #0202142c;
+}
+main a:hover{
+    color: aquamarine;
+}
+nav{
+    display: flex;
+    gap: 30px;
+}div.informaçao{
+    margin: 30px 10px 30px 10px;
+    padding: 0px 0px 10px 0px;
+    border-radius: 10px;
+    box-shadow: var(--shadow)
+}
+div.informaçao *{
+    font-size: 1.05em;
+}
+div.informaçao h1{
+    padding: 20px;
+    color: yellow;
+    background: var(--background_tag2);
+    font-size: 1.14em;
+    font-weight: bold;
+    margin: 0px 0px 20px 0px;
+    border-radius: 10px 10px 0px 0px;
+    border-bottom: var(--borda);
+}
+div.informaçao li::before{
+    content: "•";
+    color: yellow;
+}
+div.lista{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.3rem;
+    justify-content: center;
+    margin: 5px 0px 20px 0px;
+}
+div.lista h2{
+    color: yellow;
+}
+div.lista ul{
+    margin-top: 0px;
+}
+div.lista li{
+    margin-bottom: 10px;
+}
+div.categoria{
+    background-color: var(--background_categoria);
+    padding: 1px 20px 4px 20px;
+    border-radius: 8px;
+    border: var(--borda);
+    width: 210px;
+}
+.card h2{
+    display: inline-block;
+}
+.card h2::after{
+    content: "";
+    display: block;
+    width: 110%;
+    height: 1px;
+    margin-top: 8px;
+    background-color: var(--linha);
+}
+#contatos{
+    scroll-margin-top: 70px;
+}
+section{
+    margin: 20px;
+    background-color: var(--background_section);
+    border-radius: 5px;
+    box-shadow: var(--shadow)
+}
+section > p{
+    padding: 20px;
+    color: #E5E7EB;
+    line-height: 1.9;
+    font-size: 1.22em;
+    font-weight: normal;
+    text-shadow: 2px 2px 1px #02021488;
+}
+@media (max-width: 800px){
+    :root{
+        --background_main:  rgba(6, 4, 40, 0.715);
+    }
+    main{
+        width: auto;
+        border-radius: 0px;
+        border: none;
+    }
+    main > h2{
+        background-image:linear-gradient(to right, #1e2e62, transparent) ;
+        padding-bottom: 10px;
+    }
+    div.janela{
+        width:400px;
+    }
+    div.informaçao *{
+        font-family: 1.01;
+    }
+    div.lista{
+        gap: 1rem;
+        padding: 0px 0px 8px 0px;
+        margin: 2px 5px;
+    }
+    div.categoria{
+        width: 160px;
+    }
+    table{
+        margin: 20px
+    }
+    table *{
+        font-size: 1em;
+    }
+}

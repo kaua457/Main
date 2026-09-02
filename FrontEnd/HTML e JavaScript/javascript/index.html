@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+    <style>
+        table{
+            margin-top: 10px;
+            border-collapse: collapse;
+        }
+        td,th{
+            border: 1px solid black;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p>Homens <input type="text" id="homens" placeholder="Número de homens"></p>
+    <p>Mulheres <input type="text" id="mulheres" placeholder="Número de mulheres"></p>
+    <button onclick="calcular()">Enviar</button>
+    <table>
+        <tr>
+            <th>Gênero</th>
+            <th>Quantidade</th>
+            <th>Porcentagem</th>
+        </tr>
+        <tr>
+            <th>Homens</th>
+            <td id="hq"></td>
+            <td id="hp"></td>
+        </tr>
+        <tr>
+            <th>Mulheres</th>
+            <td id="mq"></td>
+            <td id="mp"></td>
+        </tr>
+        <tr>
+            <th>Todos</th>
+            <td id="total" colspan="2"></td>
+        </tr>
+    </table>
+    <script>
+        function calcular(){
+            homens = parseInt(document.getElementById('homens').value);
+            mulheres = parseInt(document.getElementById('mulheres').value);
+            document.getElementById('hq').innerHTML = homens
+            document.getElementById('mq').innerHTML = mulheres
+            total = homens + mulheres;
+            homens = (homens * 100) / total;
+            mulheres = (mulheres * 100) / total;
+            document.getElementById('hp').innerHTML = homens.toFixed(2) + '%'
+            document.getElementById('mp').innerHTML = mulheres.toFixed(2) + '%'
+            document.getElementById('total').innerHTML = total
+        }
+    </script>
+</body>
+</html>
